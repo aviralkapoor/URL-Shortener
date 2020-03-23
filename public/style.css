@@ -1,0 +1,11 @@
+.card-disp{
+    display: none;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.inputField {
+    flex: 1;
+}

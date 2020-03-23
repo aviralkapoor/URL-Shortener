@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>URL Shortener</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./scissors.svg">
+</head>
+<body>
+    <div class="container">
+    <div class="row mt-4"><h3>URL Shortener</h3><img src="./scissors.svg" width="40px" height="40px">
+    </div>
+    <hr>
+    <form id="form">
+    <div class="form-group row">
+    <div class=" col-6 my-4"><input type="text" class="form-control" id="fullurl" placeholder="URL" required></div>
+    <div class="col-6">
+    <button id="submit" class="btn btn-success my-4">Shrink</button>
+    </div>
+    </div>
+    </form>
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <div class="card text-center card-disp">
+            <div class="card-header">
+              <h5>Short URL</h5>
+            </div>
+            <div class="card-body">
+            <form>
+              <p class=" flexContainer card-text">
+                <input type="text" id='text' class="form-control">
+                <button onclick="op()" class="btn"><img src="./arrows.svg" width="25px" height="25px"></button>
+              </p>
+              <a onclick="cop()"><img src="./copy.svg" width="25px" height="25px"></a>
+              <div id="cop"></div>
+            </form>
+            </div>
+          </div>  
+      </div>        
+    </div>
+    </div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD55kl4j8MUltSXuy_NO1U-sfS7I5DyjLI",
+    authDomain: "url-shortener-5302e.firebaseapp.com",
+    databaseURL: "https://url-shortener-5302e.firebaseio.com",
+    projectId: "url-shortener-5302e",
+    storageBucket: "url-shortener-5302e.appspot.com",
+    messagingSenderId: "867256311711",
+    appId: "1:867256311711:web:7f54fe06e51cdb888667aa",
+    measurementId: "G-JDJL6CRV98"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="db.js"></script>
+</body>
+</html>
